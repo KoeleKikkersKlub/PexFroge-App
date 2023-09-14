@@ -9,6 +9,13 @@ cd PexFroge-App
 git submodule init
 git submodule update
 ```
+
+copy example env file
+```
+cp .env.example .env
+```
+
+
 install composer so it doesn't need to be run on the host
 ```
 docker run --rm -v $(pwd)/laravel:/app composer install
