@@ -1,7 +1,7 @@
 FROM php:8.2.10-fpm
 
 # Copy composer.lock and composer.json
-COPY composer.lock composer.json /var/www/
+COPY laravel/composer.lock laravel/composer.json /var/www/
 
 # Set working directory
 WORKDIR /var/www
@@ -18,14 +18,17 @@ RUN apt-get update && apt-get install -y \
     vim \
     unzip \
     git \
-    curl
+    curl\
+    libxml2-dev\
+    libonig-dev\
+    libzip-dev
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install extensions
-RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl
-RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/
+RUN docker-php-ext-install pdo_mysql mbstring xml zip exif pcntl
+RUN docker-php-ext-configure gd
 RUN docker-php-ext-install gd
 
 # Install composer
@@ -40,7 +43,9 @@ COPY ./laravel /var/www
 COPY ./app /var/www/app
 
 # Copy existing application directory permissions
-COPY --chown=www:www . /var/www
+COPY --chown=www:www ./laravel /var/www
+COPY --chown=www:www ./app /var/www/app
+
 
 # Change current user to www
 USER www
