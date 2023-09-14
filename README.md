@@ -7,6 +7,7 @@ clone de repository ergens op je local machine en open de directiry in je termin
 git clone https://github.com/koelekikkersklub/PexFroge-App
 cd PexFroge-App
 git submodule init
+git submodule update
 ```
 install composer so it doesn't need to be run on the host
 ```
