@@ -19,6 +19,8 @@ cp .env.example .env
 install composer so it doesn't need to be run on the host
 ```
 docker run --rm -v $(pwd)/laravel:/app composer install
+if using windows, use:
+docker run --rm -v "%cd%\laravel:/app" composer install
 ```
 
 start de stack en generate application key
