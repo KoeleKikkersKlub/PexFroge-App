@@ -15,8 +15,6 @@ git submodule update
 copy example env file
 ```
 cp .env.example .env
-if using windows, use:
-copy .env.example .env
 ```
 
 
