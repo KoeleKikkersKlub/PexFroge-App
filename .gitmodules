@@ -1,4 +1,4 @@
 [submodule "laravel"]
 	path = laravel
 	url = https://github.com/KoeleKikkersKlub/PexFroge-laravel.git
-	branch = hotfix
+	branch = master
