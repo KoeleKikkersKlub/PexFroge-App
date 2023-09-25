@@ -17,7 +17,6 @@ services:
       - 9000:9000
     volumes:
       - ./laravel:/var/www
-      - ./app:/var/www/app
       - ./.env:/var/www/.env
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
@@ -33,7 +32,6 @@ services:
       - "8443:443"
     volumes:
     - ./laravel/:/var/www
-    - ./app:/var/www/app
     - ./nginx/conf.d/:/etc/nginx/conf.d/
     networks:
       - app-network
