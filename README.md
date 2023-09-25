@@ -4,7 +4,7 @@ Hoofdrepo voor het project PexFroge
 # Initial setup
 
 ## Linux/ Mac
-clone de repository ergens op je local machine en open de directiry in je terminal.
+clone de repository ergens op je local machine en open de directory in je terminal.
 ```
 git clone https://github.com/koelekikkersklub/PexFroge-App
 cd PexFroge-App
@@ -30,7 +30,7 @@ docker compose exec app php artisan key:generate
 ```
 ## Windows
 
-clone de repository ergens op je local machine en open de directiry in je terminal.
+clone de repository ergens op je local machine en open de directory in je terminal.
 ```
 git clone https://github.com/koelekikkersklub/PexFroge-App
 cd PexFroge-App
