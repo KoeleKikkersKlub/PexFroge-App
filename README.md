@@ -67,3 +67,7 @@ docker compose up -d
 ```
 docker compose down
 ```
+
+# Making changes to the laravel submodule
+When your working directory is within the laravel submodule, the tracked repo automatically refers to https://github.com/KoeleKikkersKlub/PexFroge-laravel.
+You commit changes to this repo as normal when using the command line, and if you're using a gui it will most likely be shown as a separate tracked repo where you commit to as normal as well.
